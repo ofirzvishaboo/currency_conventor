@@ -1,0 +1,4 @@
+'result', 'conversion_rate', 'conversion_type', 'Amount'
+(0.56, 0.28, 'ILS to USD', 2.0)
+(3.52, 3.52, 'USD to ILS', 1.0)
+(0.7025761124121781, 4.27, 'ILS to EUR', 3.0)
