@@ -3,7 +3,7 @@ import functions
 import API
 
 
-dollar = API.get_data()[0]
+dollar = API.get_data()[0]  # Getting the API's conversion rates
 shekel = API.get_data()[2]
 eur = API.get_data()[1]
 
@@ -25,7 +25,7 @@ class MyTest(unittest.TestCase):
         data = functions.make_file_into_list()
         for line in data:
             try:
-                if int(line[1]) > 4:
+                if int(line[1]) > 4:  # Checking that the conversion not eur conversion because i did it with dividing
                     checking_results = float(line[3]) / float(line[1])
                 else:
                     checking_results = float(line[3]) * float(line[1])

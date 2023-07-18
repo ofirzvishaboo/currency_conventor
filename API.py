@@ -15,9 +15,9 @@ def get_data():
     shekel1 = data["rates"]["ILS"]
     # todays_date = data["date"] if wanted
     dollar1 = data["rates"]["USD"]
-    dollar = shekel1 / dollar1
-    shekel = dollar1/shekel1
-    eur = shekel1 / 1
+    dollar = shekel1 / dollar1  # Calculating from eur base for use
+    shekel = dollar1/shekel1  # Calculating from eur base for use
+    eur = shekel1 / 1  # Calculating from eur base for use
     return dollar, eur, shekel
 
 

@@ -38,11 +38,11 @@ def get_user_value():
         try:
             if user_choice == "1":
                 try:
-                    value_to_convert = float(input("Enter quantity to convert: "))
+                    value_to_convert = float(input("Enter quantity to convert: "))  # Getting the amount
                     usd = USD()
-                    result = usd.calculate(value_to_convert)
+                    result = usd.calculate(value_to_convert)  # Calculating
                     print(result)
-                    return result, usd.get_value(), "USD to ILS", value_to_convert
+                    return result, usd.get_value(), "USD to ILS", value_to_convert  # Returns a list of lists
                 except ValueError:
                     print("wrong input")
             elif user_choice == "2":
@@ -76,16 +76,16 @@ def main():
     while restart:
         mylist.append(get_user_value())
         choice = input("Would you like to convert another value? (y/n): ")
-        while choice not in ["y", "n"]:
+        while choice not in ["y", "n"]:  # Keeping the user from making typo's
             choice = input("Invalid choice. Please enter 'y' to convert another value or 'n' to stop: ")
         if choice == "y":
             continue
         elif choice == "n":
             print("Thanks for using our currency converter")
-            restart = False
+            restart = False  # Breaks the while loops
 
     for lists in mylist:
-        print(lists[0])
+        print(lists[0])  # Printing only the results
     functions.write_data(mylist)
     subprocess.run(["open", "alldata.txt"])  # Opening the CSV file
 
