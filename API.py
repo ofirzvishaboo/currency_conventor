@@ -8,17 +8,16 @@ def get_data():
 
 
     # Get the request data as a dictionary
-    # response1 = requests.get(url)
-    # data = response1.json()
 
-    # Extract the image title, url and, explanation
+    # Extract the conversion rates
     shekel1 = data["rates"]["ILS"]
-    # todays_date = data["date"] if wanted
     dollar1 = data["rates"]["USD"]
-    dollar = shekel1 / dollar1  # Calculating from eur base for use
-    shekel = dollar1/shekel1  # Calculating from eur base for use
-    eur = shekel1 / 1  # Calculating from eur base for use
-    return dollar, eur, shekel
+
+    # Calculations for the use
+    dollar = shekel1 / dollar1
+    shekel = dollar1/shekel1
+    eur = shekel1 / 1
+    return dollar, eur, shekel  # Returns values
 
 
 get_data()
