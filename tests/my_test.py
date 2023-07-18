@@ -25,7 +25,7 @@ class MyTest(unittest.TestCase):
         data = functions.make_file_into_list()
         for line in data:
             try:
-                if int(line[1]) > 4:  # Checking that the conversion not eur conversion because i did it with dividing
+                if int(line[1]) > 4:  # Checking that the conversion not eur conversion because i did it by dividing
                     checking_results = float(line[3]) / float(line[1])
                 else:
                     checking_results = float(line[3]) * float(line[1])

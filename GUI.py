@@ -17,16 +17,16 @@ def display_results():
     # tree.heading("Value", text="Value")
     # tree.heading("Conversion", text="Conversion")
 
-    # Read CSV file
+    # Read txt file
     reader = make_file_into_list()
     reader.pop(0)
     for index, row in enumerate(reader):
         tree.insert("", tk.END, text=index, values=row)
 
-    # Pack the Treeview widget
+    # Pack the Treeview
     tree.pack()
 
-    # Start the Tkinter event loop
+    # Start the Tkinter
     window.mainloop()
 
 
