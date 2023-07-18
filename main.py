@@ -87,7 +87,7 @@ def main():
     for lists in mylist:
         print(lists[0])  # Printing only the results
     functions.write_data(mylist)
-    subprocess.run(["open", "alldata.txt"])  # Opening the CSV file
+    subprocess.run(["open", "alldata.txt"])  # Opening the Txt file
 
 
 main()
