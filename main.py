@@ -9,6 +9,27 @@ import time
 now = time.strftime("%d  %b - %Y %H:%M:%S ")
 print("It is", now)
 
+# def get_user_value():
+#     conversions = {
+#         "1": {"currency": USD(), "conversion_type": "USD to ILS"},
+#         "2": {"currency": ILS(), "conversion_type": "ILS to USD"},
+#         "3": {"currency": EUR(), "conversion_type": "ILS to EUR"}
+#     }
+#
+#     while True:
+#         user_choice = input("1 - USD to ILS / 2 - ILS to USD / 3 - EUR to ILS: ")
+#         if user_choice in conversions:
+#             try:
+#                 value_to_convert = float(input("Enter quantity to convert: "))
+#                 currency = conversions[user_choice]["currency"]
+#                 result = currency.calculate(value_to_convert)
+#                 print(result)
+#                 return result, currency.get_value(), conversions[user_choice]["conversion_type"], value_to_convert
+#             except ValueError:
+#                 print("Invalid input")
+#         else:
+#             print("Invalid choice")
+
 def get_user_value():
     restart = True
 
@@ -47,6 +68,7 @@ def get_user_value():
                 continue
         except ValueError:
             print("wrong input")
+            continue
 
 def main():
     restart = True
